@@ -38,7 +38,7 @@
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
   },
   "mpris": {
-    "format": "<span  weight='bold' >{player_icon}</span> {dynamic}",
+    "interval": 3,
     "max-length": 45,
     "format-paused": "{status_icon} <i>{dynamic}</i>",
     "dynamic-order": ["artist", "title"],
@@ -66,11 +66,11 @@
       "on-scroll"     : 1,
       "on-click-right": "mode",
       "format": {
-        "months":     "<span color='#ff79c6'><b>{}</b></span>",
-        "days":       "<span color='#f8f8f2'><b>{}</b></span>",
-        "weeks":      "<span color='#50fa7d'>W{}</span>",
-        "weekdays":   "<span color='#ffb86c'><b>{}</b></span>",
-        "today":      "<span color='#f1fa8c'><b><u>{}</u></b></span>"
+        "months":     "<span color='#cba6f7'><b>{}</b></span>",
+        "days":       "<span color='#cdd6f4'><b>{}</b></span>",
+        "weeks":      "<span color='#94e2d5'>W{}</span>",
+        "weekdays":   "<span color='#f9e2af'><b>{}</b></span>",
+        "today":      "<span color='#f5e0dc'><b><u>{}</u></b></span>"
       }
     },
     "actions":  {
@@ -87,6 +87,7 @@
     "interface-wifi": "wlan0",
     "format-ethernet": "eth ",
     "format-wifi": "{essid} ",
+    "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
     "tooltip-format-wifi": "strength: {signalStrength}% ",
     "format-linked": "(No IP) ",
     "format-disconnected": "Disconnected ⚠"
@@ -141,33 +142,31 @@
   "custom/spacer": {
     "format":" "
   }
-    // "cpu": {
-    //     "interval": 3,
-    //     "format": "{usage}% ",
-    //     "on-click": "foot --app-id htop htop",
-    // },
-    // "memory": {
-    //     "interval": 3,
-    //     "format": "{}% ",
-    //     "on-click": "foot --app-id htop htop",
-    //     "tooltip-format": "Used: {used:0.1f}G/{total:0.1f}G. Swap: {swapUsed:0.1f}G/{swapTotal:0.1f}G",
-    //     "states": {
-    //         "critical": 80
-    //     }
-    // },
-    // "disk#ssd": {
-    //     "interval": 60,
-    //     "format": "{path} {free} ",
-    //     "path": "/",
-    //     "tooltip": true,
-    //     "warning": 80,
-    //     "critical": 90
-    // },
-    // "custom/weather": {
-    //     "interval": 900,
-    //     "exec": "~/.config/waybar/dotfiles/wittr.sh debrecen",
-    //     "return-type": "json",
-    //     "format": "{}",
-    //     "tooltip": true
-    // },
+  // "cpu": {
+  //     "interval": 3,
+  //     "format": "{usage}% ",
+  //     "on-click": "foot --app-id htop htop",
+  // },
+  // "memory": {
+  //     "interval": 3,
+  //     "format": "{}% ",
+  //     "on-click": "foot --app-id htop htop",
+  //     "tooltip-format": "Used: {used:0.1f}G/{total:0.1f}G. Swap: {swapUsed:0.1f}G/{swapTotal:0.1f}G",
+  //     "states": {
+  //         "critical": 80
+  //     }
+  // },
+  // "disk#ssd": {
+  //     "interval": 60,
+  //     "format": "{path} {free} ",
+  //     "path": "/",
+  //     "tooltip": true,
+  //     "warning": 80,
+  //     "critical": 90
+  // },
+  // linux version
+  // "custom/kernel": {
+  //   "exec": "uname -r | sed -E 's/^([0-9]+\\.[0-9]+\\.[0-9]+)-.*-([a-zA-Z0-9]+)/\\1-\\2/'",
+  //   "format": "{} "
+  // },
 }
