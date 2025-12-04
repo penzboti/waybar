@@ -43,6 +43,12 @@ button:hover {
   color: @foreground;
   font-size: 8px;
 }
+#workspaces button.active {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  min-width: 20px;
+}
 
 #workspaces button:hover {
   box-shadow: inherit;
@@ -111,7 +117,7 @@ button:hover {
 /* } */
 
 #clock {
-  background-color: @orange;
+  background-color: @light_red;
   color: @background-darker;
 }
 
@@ -152,12 +158,12 @@ label:focus {
 }
 
 #bluetooth {
-  background-color: @cyan;
+  background-color: @purple;
   color: @background-darker;
 }
 
 #pulseaudio {
-  background-color: @purple;
+  background-color: @orange;
   color: @background-darker;
 }
 
